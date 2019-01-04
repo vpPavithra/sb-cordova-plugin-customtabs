@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="cordova-plugin-customtabs"
+        id="sb-cordova-plugin-customtabs"
         version="1.0.0">
     <name>Cordova plugin for launching url in custom tabs.</name>
     <description></description>
