@@ -77,7 +77,9 @@ public class CustomTabsPlugin extends CordovaPlugin {
     public static void onTokenRecieved(String token, Context context) {
         PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, token);
         pluginResult.setKeepCallback(true);
-        tokenCallbackContext.getCallbackContext().sendPluginResult(pluginResult);
-        context.startActivity(new Intent(context, tokenCallbackContext.getCordovaMainActivity().getClass()));
+        if(tokenCallbackContext != null) {
+            tokenCallbackContext.getCallbackContext().sendPluginResult(pluginResult);
+            context.startActivity(new Intent(context, tokenCallbackContext.getCordovaMainActivity().getClass()));
+        }
     }
 }
